@@ -253,7 +253,7 @@ a { color: inherit; }
 @media (min-width: 768px) { .bloque-acento { padding: var(--space-9) var(--space-8); } }
 
 /* Pie */
-.pie { padding-bottom: var(--space-8); }
+.pie { padding-bottom: 0; }
 .pie-rejilla {
   height: 160px;
   background: url("../assets/patrones/rejilla-oscuro.svg") 0 0 / 400px 400px repeat;
@@ -263,9 +263,32 @@ a { color: inherit; }
   padding-top: var(--space-8);
   align-items: end;
 }
+.pie-grid { padding-bottom: var(--space-8); }
 .pie-logo { width: 220px; height: auto; }
 .pie-datos { display: grid; gap: var(--space-3); }
 @media (min-width: 768px) { .pie-grid { grid-template-columns: 1fr auto; } .pie-datos { text-align: right; } }
+
+/* Firma BuenVeneno: bloque cerrado en la paleta de BuenVeneno (negro, blanco, #39ff14), borde de 2px */
+.firma-bv { background: #000; color: #fff; border-top: 2px solid #39ff14; font-family: var(--font-texto); }
+.firma-bv-grid {
+  display: grid; gap: var(--space-3); align-items: center; justify-items: start;
+  padding-top: var(--space-5); padding-bottom: var(--space-5);
+}
+.firma-bv-kicker { font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #39ff14; }
+.firma-bv-logo img { width: 168px; height: auto; }
+.firma-bv-lema { font-size: 20px; line-height: 20px; font-weight: 900; letter-spacing: -.05em; text-transform: uppercase; color: #39ff14; }
+.firma-bv-lema span { font-style: italic; color: #fff; }
+.firma-bv-link {
+  font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: #fff; text-decoration: none; padding: var(--space-2) 0; border-bottom: 2px solid transparent;
+  transition: border-color var(--dur-corte), color var(--dur-corte);
+}
+.firma-bv-link:hover { border-color: #39ff14; color: #39ff14; }
+.firma-bv a:focus-visible { outline: 2px solid #39ff14; outline-offset: 2px; }
+@media (min-width: 768px) {
+  .firma-bv-grid { grid-template-columns: auto auto 1fr auto; gap: var(--space-6); }
+  .firma-bv-lema { justify-self: end; }
+}
 
 /* Movimiento: los bloques entran por máscara desde abajo, con peso y sin rebote */
 .js .reveal {
