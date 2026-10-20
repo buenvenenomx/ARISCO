@@ -1,0 +1,14 @@
+{
+  "name": "ARISCO · Cocina outdoor",
+  "short_name": "ARISCO",
+  "description": "Equipo para cocinar al aire libre, con raíces en Chihuahua y el norte de México.",
+  "lang": "es-MX",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#1E1E1E",
+  "theme_color": "#1E1E1E",
+  "icons": [
+    { "src": "assets/iconos-app/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/iconos-app/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
