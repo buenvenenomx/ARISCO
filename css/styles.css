@@ -188,10 +188,11 @@ a { color: inherit; }
 .hero-marco {
   background: var(--acero);
   aspect-ratio: 4 / 3;
-  display: grid; place-items: center;
+  overflow: hidden;
   clip-path: polygon(0 0, calc(100% - var(--corte)) 0, 100% calc(var(--corte) * 1.96), 100% 100%, 0 100%);
 }
-.hero-marco img { width: 34%; height: auto; margin-top: 8%; }
+.hero-marco picture, .hero-marco img { display: block; width: 100%; height: 100%; }
+.hero-marco img { object-fit: cover; object-position: 50% 40%; }
 @media (min-width: 900px) {
   .hero-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-8); padding-top: var(--space-9); }
   .hero-marco { aspect-ratio: 1 / 1.1; --corte: 96px; }

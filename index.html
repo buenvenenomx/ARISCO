@@ -45,7 +45,7 @@
   </script>
   <link rel="preload" href="assets/fonts/Unbounded-VF.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Inter-VF.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=3">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -76,8 +76,11 @@
           </div>
         </div>
 
-        <div class="hero-marco reveal" style="--i:2" aria-hidden="true">
-          <img src="assets/logos/monograma-caliza.svg" alt="" width="1380" height="1012">
+        <div class="hero-marco reveal" style="--i:2">
+          <picture>
+            <source media="(max-width: 899px)" srcset="assets/fotografia/hero-fuego-horizontal.webp" width="1200" height="900">
+            <img src="assets/fotografia/hero-fuego-retrato.webp" alt="Fogata de leña partida ardiendo dentro de un aro de acero, rodeado de piedras" width="960" height="1056" fetchpriority="high">
+          </picture>
         </div>
       </div>
 
